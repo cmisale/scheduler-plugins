@@ -24,9 +24,7 @@ cd scheduler-plugins
 # If not set they default to local host registry
 make local-image
 # Edit manifests/kubeflux/deploy.yaml to reflect your repo:image
-kubectl apply -f manifests/kubeflux/rbac.yaml
-kubectl apply -f manifests/kubeflux/configmap.yaml
-kubectl apply -f manifests/kubeflux/deploy.yaml
+kubectl apply -f manifests/kubeflux
 
 kubectl get pods -n kube-system | grep flux
 ```
